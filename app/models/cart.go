@@ -1,6 +1,6 @@
 package models
 
-import _ "github.com/revel/revel"
+import "github.com/revel/revel"
 
 type Cart struct {
 	Cart_id       int    `xorm:"pk"`
@@ -9,6 +9,7 @@ type Cart struct {
 	Cart_price    int    `xorm:"int"`
 	Cart_pro_id   int    `xorm:"int"`
 	Creattime     int64  `xorm:"int"`
+	User_id       int    `xorm:"int"`
 }
 
 func (c *Cart) Save(cart Cart) bool {
