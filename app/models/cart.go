@@ -1,6 +1,6 @@
 package models
 
-import "github.com/revel/revel"
+import _ "github.com/revel/revel"
 
 type Cart struct {
 	Cart_id       int    `xorm:"pk"`
