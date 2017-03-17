@@ -12,3 +12,8 @@ const (
 	KC_RAND_KIND_UPPER = 2 //大写字母
 	KC_RAND_KIND_ALL   = 3 //数字、大小写与字母
 )
+
+const PAY = 1    //支付
+const CHARGE = 2 //充值
+
+const ACCOUNT_TYPE = 1 //主账户
