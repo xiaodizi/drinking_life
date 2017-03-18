@@ -1,6 +1,7 @@
 package models
 
 import "github.com/revel/revel"
+import "strconv"
 
 type Cart struct {
 	Cart_id       int    `xorm:"pk"`
@@ -34,11 +35,21 @@ func (c *Cart) Delete(cartId int) bool {
 }
 
 func (c *Cart) Upadte(cartId int, cart Cart) bool {
-	has, err := DB_Write.Table("dl_sys_role").Id(cartId).Update(cart)
+	has, err := DB_Write.Table("dl_cart").Id(cartId).Update(cart)
 	if err != nil {
 		revel.WARN.Println(has)
 		revel.WARN.Println("错误: %v", err)
 		return false
 	}
 	return true
+}
+
+func (c *Cart) GetByCartId(cartId int) *Cart {
+	cart := new(Cart)
+	has, err := DB_Read.Table("dl_cart").Where("cart_id = '" + strconv.Itoa(cartId) + "'").Get(cart)
+	if err != nil {
+		revel.WARN.Println(has)
+		revel.WARN.Println(err.Error())
+	}
+	return cart
 }
