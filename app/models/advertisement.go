@@ -23,6 +23,17 @@ func (ad *Advertisement) Save(advertisement Advertisement) bool {
 	return true
 }
 
+func (ad *Advertisement) Delete(adid int) bool {
+	advertisement := new(Advertisement)
+	has, err := DB_Write.Table("dl_ad").Id(adid).Delete(advertisement)
+	if err != nil {
+		revel.WARN.Println(has)
+		revel.WARN.Println("错误: %v", err)
+		return false
+	}
+	return true
+}
+
 func (ad *Advertisement) Update(adid int, advertisement Advertisement) bool {
 	has, err := DB_Write.Table("dl_ad").Id(adid).Update(advertisement)
 	if err != nil {
@@ -36,6 +47,15 @@ func (ad *Advertisement) Update(adid int, advertisement Advertisement) bool {
 func (ad *Advertisement) Getall() []Advertisement {
 	var advertisements []Advertisement
 	err := DB_Write.Table("dl_ad").Find(&advertisements)
+	if err != nil {
+		revel.WARN.Println("错误: %v", err)
+		return nil
+	}
+	return advertisements
+}
+func (ad *Advertisement) Sort(count int) []Advertisement {
+	var advertisements []Advertisement
+	err := DB_Write.Table("dl_ad").Limit(count).Asc("sort_id").Find(&advertisements)
 	if err != nil {
 		revel.WARN.Println("错误: %v", err)
 		return nil

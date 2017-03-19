@@ -9,9 +9,9 @@ import (
 	controllers "drinking_life/app/controllers"
 	_ "drinking_life/app/models"
 	tests "drinking_life/tests"
-	controllers1 "github.com/revel/modules/static/app/controllers"
+	controllers0 "github.com/revel/modules/static/app/controllers"
 	_ "github.com/revel/modules/testrunner/app"
-	controllers0 "github.com/revel/modules/testrunner/app/controllers"
+	controllers1 "github.com/revel/modules/testrunner/app/controllers"
 	"github.com/revel/revel/testing"
 )
 
@@ -30,10 +30,21 @@ func main() {
 	revel.Init(*runMode, *importPath, *srcPath)
 	revel.INFO.Println("Running revel server")
 	
+<<<<<<< HEAD
 	revel.RegisterController((*controllers.Advertisement)(nil),
+=======
+	revel.RegisterController((*controllers.AdClass)(nil),
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 		[]*revel.MethodType{
 			&revel.MethodType{
 				Name: "Save",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Delete",
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
@@ -56,7 +67,11 @@ func main() {
 			
 		})
 	
+<<<<<<< HEAD
 	revel.RegisterController((*controllers.Member)(nil),
+=======
+	revel.RegisterController((*controllers.Agent)(nil),
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 		[]*revel.MethodType{
 			&revel.MethodType{
 				Name: "Save",
@@ -66,20 +81,29 @@ func main() {
 				},
 			},
 			&revel.MethodType{
+<<<<<<< HEAD
 				Name: "Update",
+=======
+				Name: "Delete",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
 				},
 			},
 			&revel.MethodType{
+<<<<<<< HEAD
 				Name: "Hasbyname",
+=======
+				Name: "Update",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
 				},
 			},
 			&revel.MethodType{
+<<<<<<< HEAD
 				Name: "Hascode",
 				Args: []*revel.MethodArg{ 
 				},
@@ -95,6 +119,9 @@ func main() {
 			},
 			&revel.MethodType{
 				Name: "Isuse",
+=======
+				Name: "Getall",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
@@ -103,7 +130,11 @@ func main() {
 			
 		})
 	
+<<<<<<< HEAD
 	revel.RegisterController((*controllers.Product)(nil),
+=======
+	revel.RegisterController((*controllers.Member)(nil),
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 		[]*revel.MethodType{
 			&revel.MethodType{
 				Name: "Save",
@@ -120,14 +151,252 @@ func main() {
 				},
 			},
 			&revel.MethodType{
+<<<<<<< HEAD
 				Name: "Upframe",
+=======
+				Name: "Hasbyname",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
 				},
 			},
 			&revel.MethodType{
+<<<<<<< HEAD
 				Name: "Downfrmae",
+=======
+				Name: "Hascode",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Getall",
+=======
+				Name: "Login",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Isuse",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+<<<<<<< HEAD
+	revel.RegisterController((*controllers.Role)(nil),
+=======
+	revel.RegisterController((*controllers.Product)(nil),
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Save",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Update",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Getall",
+=======
+				Name: "Upframe",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+	revel.RegisterController((*controllers.Cart)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Save",
+=======
+				Name: "Downfrmae",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Addnum",
+=======
+				Name: "Getall",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+	revel.RegisterController((*controllers.Rolegrant)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Delete",
+=======
+				Name: "Save",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+	revel.RegisterController((*controllers.User)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Userlist",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Save",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Hascellphone",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+<<<<<<< HEAD
+	revel.RegisterController((*controllers.Rolegrant)(nil),
+=======
+	revel.RegisterController((*controllers.Advertisement)(nil),
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Save",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+	revel.RegisterController((*controllers.User)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Userlist",
+=======
+				Name: "Delete",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Update",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Getall",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+<<<<<<< HEAD
+				Name: "Save",
+=======
+				Name: "Sort",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+	revel.RegisterController((*controllers.Agentlevel)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Save",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Delete",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Update",
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Hascellphone",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			
+		})
+	
+	revel.RegisterController((*controllers.Modular)(nil),
+		[]*revel.MethodType{
+			&revel.MethodType{
+				Name: "Save",
+				Args: []*revel.MethodArg{ 
+				},
+				RenderArgNames: map[int][]string{ 
+				},
+			},
+			&revel.MethodType{
+				Name: "Update",
 				Args: []*revel.MethodArg{ 
 				},
 				RenderArgNames: map[int][]string{ 
@@ -169,25 +438,23 @@ func main() {
 			
 		})
 	
-	revel.RegisterController((*controllers.Cart)(nil),
+	revel.RegisterController((*controllers0.Static)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
-				Name: "Save",
+				Name: "Serve",
 				Args: []*revel.MethodArg{ 
+					&revel.MethodArg{Name: "prefix", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "filepath", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
 				},
 			},
 			&revel.MethodType{
-				Name: "Addnum",
+				Name: "ServeModule",
 				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
-				Name: "Delete",
-				Args: []*revel.MethodArg{ 
+					&revel.MethodArg{Name: "moduleName", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "prefix", Type: reflect.TypeOf((*string)(nil)) },
+					&revel.MethodArg{Name: "filepath", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
 				},
@@ -195,71 +462,7 @@ func main() {
 			
 		})
 	
-	revel.RegisterController((*controllers.Modular)(nil),
-		[]*revel.MethodType{
-			&revel.MethodType{
-				Name: "Save",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
-				Name: "Update",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
-				Name: "Getall",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			
-		})
-	
-	revel.RegisterController((*controllers.Rolegrant)(nil),
-		[]*revel.MethodType{
-			&revel.MethodType{
-				Name: "Save",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			
-		})
-	
-	revel.RegisterController((*controllers.User)(nil),
-		[]*revel.MethodType{
-			&revel.MethodType{
-				Name: "Userlist",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
-				Name: "Save",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
-				Name: "Hascellphone",
-				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			
-		})
-	
-	revel.RegisterController((*controllers0.TestRunner)(nil),
+	revel.RegisterController((*controllers1.TestRunner)(nil),
 		[]*revel.MethodType{
 			&revel.MethodType{
 				Name: "Index",
@@ -293,30 +496,6 @@ func main() {
 			&revel.MethodType{
 				Name: "List",
 				Args: []*revel.MethodArg{ 
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			
-		})
-	
-	revel.RegisterController((*controllers1.Static)(nil),
-		[]*revel.MethodType{
-			&revel.MethodType{
-				Name: "Serve",
-				Args: []*revel.MethodArg{ 
-					&revel.MethodArg{Name: "prefix", Type: reflect.TypeOf((*string)(nil)) },
-					&revel.MethodArg{Name: "filepath", Type: reflect.TypeOf((*string)(nil)) },
-				},
-				RenderArgNames: map[int][]string{ 
-				},
-			},
-			&revel.MethodType{
-				Name: "ServeModule",
-				Args: []*revel.MethodArg{ 
-					&revel.MethodArg{Name: "moduleName", Type: reflect.TypeOf((*string)(nil)) },
-					&revel.MethodArg{Name: "prefix", Type: reflect.TypeOf((*string)(nil)) },
-					&revel.MethodArg{Name: "filepath", Type: reflect.TypeOf((*string)(nil)) },
 				},
 				RenderArgNames: map[int][]string{ 
 				},

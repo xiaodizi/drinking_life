@@ -4,6 +4,7 @@ package routes
 import "github.com/revel/revel"
 
 
+<<<<<<< HEAD
 type tAdvertisement struct {}
 var Advertisement tAdvertisement
 
@@ -27,6 +28,70 @@ func (_ tAdvertisement) Getall(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("Advertisement.Getall", args).Url
+=======
+type tAdClass struct {}
+var AdClass tAdClass
+
+
+func (_ tAdClass) Save(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdClass.Save", args).Url
+}
+
+func (_ tAdClass) Delete(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdClass.Delete", args).Url
+}
+
+func (_ tAdClass) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdClass.Update", args).Url
+}
+
+func (_ tAdClass) Getall(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdClass.Getall", args).Url
+}
+
+
+type tAgent struct {}
+var Agent tAgent
+
+
+func (_ tAgent) Save(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agent.Save", args).Url
+}
+
+func (_ tAgent) Delete(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agent.Delete", args).Url
+}
+
+func (_ tAgent) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agent.Update", args).Url
+}
+
+func (_ tAgent) Getall(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agent.Getall", args).Url
 }
 
 
@@ -114,6 +179,95 @@ func (_ tProduct) Getall(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("Product.Getall", args).Url
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
+}
+
+
+type tMember struct {}
+var Member tMember
+
+
+func (_ tMember) Save(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Member.Save", args).Url
+}
+
+func (_ tMember) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Member.Update", args).Url
+}
+
+func (_ tMember) Hasbyname(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Member.Hasbyname", args).Url
+}
+
+func (_ tMember) Hascode(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Member.Hascode", args).Url
+}
+
+func (_ tMember) Login(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Member.Login", args).Url
+}
+
+func (_ tMember) Isuse(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Member.Isuse", args).Url
+}
+
+
+type tProduct struct {}
+var Product tProduct
+
+
+func (_ tProduct) Save(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Product.Save", args).Url
+}
+
+<<<<<<< HEAD
+func (_ tProduct) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Product.Update", args).Url
+}
+
+func (_ tProduct) Upframe(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Product.Upframe", args).Url
+}
+
+func (_ tProduct) Downfrmae(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Product.Downfrmae", args).Url
+}
+
+func (_ tProduct) Getall(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Product.Getall", args).Url
 }
 
 
@@ -166,6 +320,67 @@ func (_ tCart) Delete(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("Cart.Delete", args).Url
+=======
+func (_ tAdvertisement) Delete(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Advertisement.Delete", args).Url
+}
+
+func (_ tAdvertisement) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Advertisement.Update", args).Url
+}
+
+func (_ tAdvertisement) Getall(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Advertisement.Getall", args).Url
+}
+
+func (_ tAdvertisement) Sort(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Advertisement.Sort", args).Url
+}
+
+
+type tAgentlevel struct {}
+var Agentlevel tAgentlevel
+
+
+func (_ tAgentlevel) Save(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agentlevel.Save", args).Url
+}
+
+func (_ tAgentlevel) Delete(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agentlevel.Delete", args).Url
+}
+
+func (_ tAgentlevel) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agentlevel.Update", args).Url
+}
+
+func (_ tAgentlevel) Getall(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Agentlevel.Getall", args).Url
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 }
 
 
@@ -195,6 +410,7 @@ func (_ tModular) Getall(
 }
 
 
+<<<<<<< HEAD
 type tRolegrant struct {}
 var Rolegrant tRolegrant
 
@@ -230,6 +446,60 @@ func (_ tUser) Hascellphone(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("User.Hascellphone", args).Url
+=======
+type tRole struct {}
+var Role tRole
+
+
+func (_ tRole) Save(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Role.Save", args).Url
+}
+
+func (_ tRole) Update(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Role.Update", args).Url
+}
+
+func (_ tRole) Getall(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Role.Getall", args).Url
+}
+
+
+type tStatic struct {}
+var Static tStatic
+
+
+func (_ tStatic) Serve(
+		prefix string,
+		filepath string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "prefix", prefix)
+	revel.Unbind(args, "filepath", filepath)
+	return revel.MainRouter.Reverse("Static.Serve", args).Url
+}
+
+func (_ tStatic) ServeModule(
+		moduleName string,
+		prefix string,
+		filepath string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "moduleName", moduleName)
+	revel.Unbind(args, "prefix", prefix)
+	revel.Unbind(args, "filepath", filepath)
+	return revel.MainRouter.Reverse("Static.ServeModule", args).Url
+>>>>>>> bf010d9cd0c3733b8cf6a9f2dab02f291c05810e
 }
 
 
@@ -269,35 +539,6 @@ func (_ tTestRunner) List(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("TestRunner.List", args).Url
-}
-
-
-type tStatic struct {}
-var Static tStatic
-
-
-func (_ tStatic) Serve(
-		prefix string,
-		filepath string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "prefix", prefix)
-	revel.Unbind(args, "filepath", filepath)
-	return revel.MainRouter.Reverse("Static.Serve", args).Url
-}
-
-func (_ tStatic) ServeModule(
-		moduleName string,
-		prefix string,
-		filepath string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "moduleName", moduleName)
-	revel.Unbind(args, "prefix", prefix)
-	revel.Unbind(args, "filepath", filepath)
-	return revel.MainRouter.Reverse("Static.ServeModule", args).Url
 }
 
 
