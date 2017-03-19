@@ -23,3 +23,6 @@ const UNPAID = 11001      //未支付
 
 const ALERD_RECEIVE = 21000 //已领取
 const UPRECEIVE = 21001     //未领取
+
+const ALREADY_SHIPPED = 310000 //已发货
+const NOT_SHIPPED = 310001     //未发货
