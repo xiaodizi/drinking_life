@@ -26,9 +26,6 @@ func (ad *Advertisement) Save() revel.Result {
 	if advertisementwords == "" {
 		return ad.RenderJson("广告语为空,添加失败")
 	}
-	if isdisplay == 0 {
-		return ad.RenderJson("是否显示为空,添加失败")
-	}
 	if sortid == 0 {
 		return ad.RenderJson("排序id为空,添加失败")
 	}
@@ -68,7 +65,6 @@ func (ad *Advertisement) Update() revel.Result {
 	advertisementname := ad.Params.Get("advertisementname")
 	photo := ad.Params.Get("photo")
 	advertisementwords := ad.Params.Get("advertisementwords")
-	isdisplay, _ := strconv.Atoi(ad.Params.Get("isdisplay"))
 	sortid, _ := strconv.Atoi(ad.Params.Get("sortid"))
 	classid, _ := strconv.Atoi(ad.Params.Get("classid"))
 	models_advertisement := new(models.Advertisement)
@@ -76,7 +72,6 @@ func (ad *Advertisement) Update() revel.Result {
 	advertisements.Ad_name = advertisementname
 	advertisements.Photo = photo
 	advertisements.Ad_words = advertisementwords
-	advertisements.Is_display = isdisplay
 	advertisements.Sort_id = sortid
 	advertisements.Class_id = classid
 	b := models_advertisement.Update(advertisementid, advertisements)
@@ -98,4 +93,22 @@ func (ad *Advertisement) Sort() revel.Result {
 	var advertisements []models.Advertisement
 	advertisements = models_advertisement.Sort(count)
 	return ad.RenderJson(advertisements)
+}
+func (ad *Advertisement) IsDisplay() revel.Result {
+	ad_id, _ := strconv.Atoi(ad.Params.Get("ad_id"))
+	model_advertisement := new(models.Advertisement)
+	b := model_advertisement.IsDisplay(ad_id)
+	if b == false {
+		return ad.RenderJson("广告显示失败")
+	}
+	return ad.RenderJson("广告显示成功")
+}
+func (ad *Advertisement) IsnotDisplay() revel.Result {
+	ad_id, _ := strconv.Atoi(ad.Params.Get("ad_id"))
+	model_advertisement := new(models.Advertisement)
+	b := model_advertisement.IsnotDisplay(ad_id)
+	if b == false {
+		return ad.RenderJson("广告取消显示失败")
+	}
+	return ad.RenderJson("广告取消显示成功")
 }

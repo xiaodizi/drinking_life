@@ -1,10 +1,16 @@
 package utils
 
-const Is_used = 1    //后台管理用户启用
-const Is_not_use = 0 //后台管理用户禁用
+const Is_used = 1     //后台管理用户启用
+const Is_not_used = 0 //后台管理用户禁用
 
 const Is_frame_up = 1   //上架
 const Is_frame_down = 0 //下架
+
+const Is_use = 1     //使用
+const Is_not_use = 0 //不使用
+
+const Is_display = 1     //广告允许显示
+const Is_not_display = 0 //广告禁止显示
 
 const (
 	KC_RAND_KIND_NUM   = 0 //纯数字
@@ -17,3 +23,5 @@ const PAY = 1    //支付
 const CHARGE = 2 //充值
 
 const ACCOUNT_TYPE = 1 //主账户
+
+const Regular = "^(13[0-9]|14[57]|15[0-35-9]|18[07-9])\\\\d{8}$"

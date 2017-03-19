@@ -45,7 +45,7 @@ func InitDB() {
 	if err != nil {
 		revel.WARN.Println("DB_Read错误: %v", err)
 	}
-
+	DB_Read.ShowSQL(true)
 	write_driver, _ := c.String("databases", "db.write.driver")
 	write_dbname, _ := c.String("databases", "db.write.dbname")
 	write_user, _ := c.String("databases", "db.write.user")
@@ -56,5 +56,5 @@ func InitDB() {
 	if err != nil {
 		revel.WARN.Println("DB_Write错误: %v", err)
 	}
-
+	DB_Write.ShowSQL(true)
 }
