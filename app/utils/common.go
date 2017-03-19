@@ -17,3 +17,9 @@ const PAY = 1    //支付
 const CHARGE = 2 //充值
 
 const ACCOUNT_TYPE = 1 //主账户
+
+const ALERD_PAYID = 11000 //已支付
+const UNPAID = 11001      //未支付
+
+const ALERD_RECEIVE = 21000 //已领取
+const UPRECEIVE = 21001     //未领取
