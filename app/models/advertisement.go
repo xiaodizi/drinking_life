@@ -1,6 +1,7 @@
 package models
 
 import "github.com/revel/revel"
+import "drinking_life/app/utils"
 
 type Advertisement struct {
 	Ad_id      int    `xorm:"pk"`
@@ -61,4 +62,22 @@ func (ad *Advertisement) Sort(count int) []Advertisement {
 		return nil
 	}
 	return advertisements
+}
+func (ad *Advertisement) IsDisplay(ad_id int) bool {
+	has, err := DB_Write.Exec("update dl_ad set is_display = ? where ad_id = ?", utils.Is_display, ad_id)
+	if err != nil {
+		revel.WARN.Println(has)
+		revel.WARN.Println("错误: %v", err)
+		return false
+	}
+	return true
+}
+func (ad *Advertisement) IsnotDisplay(ad_id int) bool {
+	has, err := DB_Write.Exec("update dl_ad set is_display = ? where ad_id = ?", utils.Is_not_display, ad_id)
+	if err != nil {
+		revel.WARN.Println(has)
+		revel.WARN.Println("错误: %v", err)
+		return false
+	}
+	return true
 }

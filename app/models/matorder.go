@@ -1,7 +1,11 @@
-package main
+package models
 
+<<<<<<< HEAD
 import "github.com/revel/revel"
 import "drinking_life/app/utils"
+=======
+import _ "github.com/revel/revel"
+>>>>>>> 25137ba484fa05a5661709767b3e2c5095cb42c9
 
 type Matorder struct {
 	Id             int64  `xomr:"pk"`

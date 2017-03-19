@@ -7,17 +7,14 @@ import (
 )
 import "drinking_life/app/models"
 import "strconv"
+import "drinking_life/app/utils"
 
 type Agent struct {
 	*revel.Controller
 }
 
-const (
-	regular = "^(13[0-9]|14[57]|15[0-35-9]|18[07-9])\\\\d{8}$"
-)
-
 func validate(mobileNum string) bool {
-	reg := regexp.MustCompile(regular)
+	reg := regexp.MustCompile(utils.Regular)
 	return reg.MatchString(mobileNum)
 }
 func (a *Agent) Save() revel.Result {
