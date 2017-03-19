@@ -1,6 +1,6 @@
-package main
+package models
 
-import "github.com/revel/revel"
+import _ "github.com/revel/revel"
 
 type Matorder struct {
 }

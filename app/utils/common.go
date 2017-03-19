@@ -24,12 +24,9 @@ const CHARGE = 2 //充值
 
 const ACCOUNT_TYPE = 1 //主账户
 
-<<<<<<< HEAD
 const Regular = "^(13[0-9]|14[57]|15[0-35-9]|18[07-9])\\\\d{8}$"
-=======
 const ALERD_PAYID = 11000 //已支付
 const UNPAID = 11001      //未支付
 
 const ALERD_RECEIVE = 21000 //已领取
 const UPRECEIVE = 21001     //未领取
->>>>>>> 27507c37804c1a4a1c8c65557a42a8282fd8463f
